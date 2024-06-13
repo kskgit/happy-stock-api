@@ -1,0 +1,7 @@
+version: '3'
+
+tasks:
+  hello:
+    desc: "This task says Hello, World!"
+    cmds:
+      - docker pull postgres:alpine3.20
