@@ -1,3 +1,5 @@
 # happy-stock-api
-
-Describe your project here.
+サーバー起動
+```
+rye run fastapi dev src/happy_stock_api/main.py
+```
