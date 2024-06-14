@@ -86,6 +86,16 @@ packaging==24.1
     # via tables
 pandas==2.2.2
     # via pydemic
+postgres==4.0
+    # via happy-stock-api
+psycopg2==2.9.9
+    # via happy-stock-api
+psycopg2-binary==2.9.9
+    # via happy-stock-api
+    # via postgres
+    # via psycopg2-pool
+psycopg2-pool==1.2
+    # via postgres
 py-cpuinfo==9.0.0
     # via blosc2
     # via tables
