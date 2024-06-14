@@ -38,6 +38,8 @@ fastapi-cli==0.0.4
     # via happy-stock-api
 graphql-core==3.2.3
     # via strawberry-graphql
+gunicorn==22.0.0
+    # via happy-stock-api
 h11==0.14.0
     # via httpcore
     # via uvicorn
@@ -88,6 +90,7 @@ numpy==1.26.4
 orjson==3.10.3
     # via fastapi
 packaging==24.1
+    # via gunicorn
     # via pytest
     # via tables
 pandas==2.2.2
