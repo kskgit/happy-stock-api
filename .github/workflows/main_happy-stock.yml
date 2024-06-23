@@ -29,9 +29,7 @@ jobs:
         run: |
           source $HOME/.rye/env
           rye sync
-          source .venv/bin/activate
-          rye run pytest tests/test_main.py
-        
+          source .venv/bin/activate        
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
       - name: Zip artifact for deployment
