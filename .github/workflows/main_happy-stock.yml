@@ -22,13 +22,15 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Create and start virtual environment
-        run: |
-          python -m venv venv
-          source venv/bin/activate
+      - name: Install rye
+        run: curl -sSf https://rye-up.com/get | RYE_INSTALL_OPTION="--yes" bash
       
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+      - name: activate rye
+        run: |
+          source $HOME/.rye/env
+          rye sync
+          source .venv/bin/activate
+          rye run pytest tests/test_main.py
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
@@ -60,7 +62,6 @@ jobs:
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
-
       
       - name: Login to Azure
         uses: azure/login@v1
